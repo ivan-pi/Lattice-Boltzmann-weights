@@ -6,6 +6,12 @@ import numpy as np
 import cvxpy as cvx
 from Functions import YesNo, Echo, EchoError
 
+# use raw_input instead of input when python2 is used
+try:
+    input = raw_input
+except NameError:
+    pass
+
 
 def ParseArguments():
     parser = argparse.ArgumentParser(description="""Find optimal weights for 
